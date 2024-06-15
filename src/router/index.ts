@@ -3,6 +3,7 @@ import Home from "../views/Home.vue";
 import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import List from "../views/List.vue";
+import ListDetail from "../views/ListDetail.vue";
 import NotFound from "../views/NotFound.vue";
 
 const routes = [
@@ -25,6 +26,12 @@ const routes = [
     path: "/list",
     name: "List",
     component: List,
+  },
+  {
+    path: "/list/:id",
+    name: "Detail",
+    component: ListDetail,
+    props: true,
   },
   {
     path: "/:catchAll(.*)",
